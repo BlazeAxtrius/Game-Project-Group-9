@@ -1,0 +1,18 @@
+player = {"Name": "Berserker The God", "Health": "100", "Armor": "leather", "Damage": "0", "Weapon": ["None"], "Experience": "0", "Mana": "100", "alive": "True"}
+player["Inventory"] = ["water", "potion", "food", "herbs"]
+player["Inventory"].append("Wooden Sword")
+player["Weapon"].append("Wooden Sword")
+
+def print_player(player):
+    for key in player:
+        print(str(key) + ": " + str(player[key]))
+
+print_player(player)
+
+def compute_experience(damage):
+
+    damage = range(0, 3)
+
+def take_damage(player, damage):
+    
+    return player
