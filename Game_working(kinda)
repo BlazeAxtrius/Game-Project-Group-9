@@ -1,0 +1,93 @@
+from random import randrange
+import collections
+
+player = collections.OrderedDict()
+player['Name'] = 'Berserker The God'
+player['HP'] = 100
+player['Mana'] = 100
+player['Armor'] = 'Leather'
+player['Weapon'] = 'None'
+player['Damage'] = randrange(1, 4)
+player['Exp'] = 0
+player['alive'] = True
+player['Inventory'] = 'water', 'potion', 'food', 'herbs'
+
+enemy1 = collections.OrderedDict()
+enemy1['Name'] = 'Slime'
+enemy1['HP'] = 10
+enemy1['Damage'] = randrange(1, 3)
+enemy1['alive'] = True
+
+enemy2 = collections.OrderedDict()
+enemy2['Name'] = 'Wolf'
+enemy2['HP'] = 30
+enemy2['Damage'] = randrange(4, 7)
+enemy2['alive'] = True
+
+enemy3 = collections.OrderedDict()
+enemy3['Name'] = 'Ogre'
+enemy3['HP'] = 60
+enemy3['Damage'] = randrange(10, 16)
+enemy3['alive'] = True
+
+enemy4 = collections.OrderedDict()
+enemy4['Name'] = 'DemiGod'
+enemy4['HP'] = 100
+enemy4['Damage'] = randrange(20, 30)
+enemy4['alive'] = True
+
+enemy5 = collections.OrderedDict()
+enemy5['Name'] = 'God'
+enemy5['HP'] = 200
+enemy5['Damage'] = randrange(40, 55)
+enemy5['alive'] = True
+
+def print_player(player):
+    for key in player:
+        print(key + ": " + str(player[key]))
+
+
+def print_enemy1(enemy):
+    for key1 in enemy:
+        print(key1 + ": " + str(enemy1[key1]))
+
+
+def compute_experience(damage):
+    damage = randrange(0, damage*2 + 1)
+    return damage
+
+
+def take_damage_enemy1(enemy1, damage_dealt):
+    enemy1["HP"] = enemy1["HP"] - player["Damage"]
+    if enemy1["HP"] <= 0:
+        enemy1["alive"] = False
+        enemy1["HP"] = 0
+    return enemy1
+
+
+def take_damage(player, damage):
+    player["HP"] = player["HP"] - enemy1["Damage"]
+    player["Exp"] = player["Exp"] + compute_experience(damage)
+    if player["HP"] <= 0:
+        player["alive"] = False
+        player["HP"] = 0
+        print('You are DEAD!')
+    return player
+
+
+while enemy1["alive"] and player["alive"]:
+    damage_dealt = player["Damage"]
+    damage_dealt = enemy1["Damage"]
+    take_damage_enemy1(enemy1, damage_dealt)
+    take_damage(player, damage_dealt)
+    print_enemy1(enemy1)
+    print()
+    print_player(player)
+    print("")
+    print()
+    if enemy1['alive'] == False:
+        break
+
+player['Weapon'] = 'Wooden Sword'
+print('You received a \"Wooden Sword\".')
+
