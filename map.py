@@ -18,7 +18,7 @@ room_hallway_g_w = {
         
         .""",
 
-    "exits": {"" : ""},
+    "exits": {"north" : "dining room, G, W", "south": "lounge, G, W", "east": "hallway, G, C, W},
 
     "items": []
 }
@@ -34,7 +34,7 @@ room_hallway_g_e = {
 
     .""",
 
-    "exits": {"": ""}, 
+    "exits": {"west": "hallway, G, C, E", "up": "hallway, F1, S", "down": "hallway, F-1"}, 
 
     "items": []
 }  
@@ -50,7 +50,7 @@ room_hallway_g_c_w = {
 
     .""",
 
-    "exits": {"": ""},
+    "exits": {"west": "hallway, G, W", "north": "dining room, G, E", "south": "lounge, G, E"},
 
     "items": []
 }
@@ -66,7 +66,7 @@ room_hallway_g_c_e = {
 
     .""",
 
-    "exits": {"": ""},
+    "exits": {"north": "kitchen", "south": "office, G", "east": "hallway, G, E"},
 
     "items": []
 }
@@ -82,7 +82,7 @@ room_dining_w = {
         
         .""",
 
-    "exits": {"" : ""},
+    "exits": {"south" : "hallway, G, W", "east": "dining room, G, E"},
 
     "items": []
 }    
@@ -98,7 +98,7 @@ room_dining_e = {
 
     .""",
 
-    "exits": {"": ""},
+    "exits": {"west": "dining room, G, W", "east": "kitchen, G", "south": "hallway, G, C, W"},
 
     "items": []
 }
@@ -114,7 +114,7 @@ room_kitchen = {
         
         .""",
 
-    "exits": {"" : ""},
+    "exits": {"south" : "hallway, G, C, E", "west": "dining room, G, E"},
 
     "items": []
 }     
@@ -129,7 +129,7 @@ room_offfice = {
         
         .""",
 
-    "exits": {"" : ""},
+    "exits": {"north" : "hallway, G, C, E", "west": "lounge, G, E"},
 
     "items": []
 }  
@@ -143,7 +143,7 @@ room_lounge_e = {
         
         .""",
 
-    "exits": {"" : ""},
+    "exits": {"north" : "hallway, G, C, W", "east": "office, G", "west": "lounge, G, W"},
 
     "items": []
 }    
@@ -158,7 +158,7 @@ room_lounge_w = {
 
     .""",
 
-    "exits": {"": ""}, 
+    "exits": {"north": "hallway, G, W", "east": "lounge, G, E"}, 
 
     "items": []
 }
@@ -174,7 +174,7 @@ room_store = {
         
         .""",
 
-    "exits": {"" : ""},
+    "exits": {"north" : "pantry, F-1", "south": "wine cellar, F-1", "east": "hallway, F-1"},
 
     "items": []
 }    
@@ -188,7 +188,7 @@ room_pantry = {
         
         .""",
 
-    "exits": {"" : ""},
+    "exits": {"south" : "store, F-1", "east": "torture, F-1"},
 
     "items": []
 }    
@@ -202,7 +202,7 @@ room_torture = {
         
         .""",
 
-    "exits": {"" : ""},
+    "exits": {"west" : "pantry, F-1", "south": "hallway, F-1"},
 
     "items": []
 }    
@@ -216,7 +216,7 @@ room_hallway_b = {
         
         .""",
 
-    "exits": {"" : ""},
+    "exits": {"north" : "torture, F-1", "south": "workshop, F-1", "west": "store, F-1", "up": "hallway, G, E"},
 
     "items": []
 }    
@@ -230,7 +230,7 @@ room_secret = {
         
         .""",
 
-    "exits": {"" : ""},
+    "exits": {"west" : "workshop, F-1"},
 
     "items": []
 }    
@@ -244,7 +244,7 @@ room_workshop = {
         
         .""",
 
-    "exits": {"" : ""},
+    "exits": {"west" : "wine cellar, F-1", "east": "secret, F-1", "north": "hallway, F-1"},
 
     "items": []
 }    
@@ -258,7 +258,7 @@ room_winecellar = {
         
         .""",
 
-    "exits": {"" : ""},
+    "exits": {"north" : "store, F-1", "east": "workshop, F-1"},
 
     "items": []
 }    
