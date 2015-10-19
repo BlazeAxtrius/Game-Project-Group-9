@@ -272,7 +272,7 @@ room_hallway_f_s = {
         
         .""",
 
-    "exits": {"" : ""},
+    "exits": {"north" : "hallway, F1, E", "west": "master bedroom, F1", "down": "hallway, G, E" },
 
     "items": []
 }    
@@ -287,7 +287,7 @@ room_hallway_f_e = {
 
     .""",
 
-    "exits": {"": ""},
+    "exits": {"south": "hallway, F1, S", "west": "hallway, F1, N"},
 
     "items": []
 }
@@ -302,7 +302,7 @@ room_hallway_f_n = {
 
     .""",
 
-    "exits": {"": ""},
+    "exits": {"west": "hallway, F1, W", "south": "master bedroom, F1", "east": "hallway, F1, E"},
 
     "items": []
 }
@@ -317,7 +317,7 @@ room_hallway_f_w = {
 
     .""",
 
-    "exits": {"": ""},
+    "exits": {"south": "child bedroom, F1", "east", "hallway, F1, N"},
 
     "items": []
 }
@@ -332,7 +332,7 @@ room_child = {
         
         .""",
 
-    "exits": {"" : ""},
+    "exits": {"north" : "hallway, F1, W", "east", "master bedroom, F1", "south": "store, F1"},
 
     "items": []
 }    
@@ -347,7 +347,7 @@ room_store = {
         
         .""",
 
-    "exits": {"" : ""},
+    "exits": {"north" : "child bedroom, F1", "east": "bathroom, F1"},
 
     "items": []
 }    
@@ -362,7 +362,7 @@ room_bathroom = {
         
         .""",
 
-    "exits": {"" : ""},
+    "exits": {"north" : "master bedroom, F1", "west": "store, F1"},
 
     "items": []
 }    
@@ -376,7 +376,7 @@ room_master = {
         
         .""",
 
-    "exits": {"" : ""},
+    "exits": {"north" : "hallway, F1, N", "south": "bathroom, F1", "west": "child bedroom, F1", "east": "hallway, F1, S"},
 
     "items": []
 }    
